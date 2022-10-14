@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+  padding: 60px;
+
+  background-color: #0d1117 !important;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%; */
+}
+
+button {
+  width: 70px;
+  height: 30px;
+  outline: none;
+  border: none;
+  background-color: #0d1117;
+  border: 1px solid rgb(49, 54, 61);
+  color: rgba(255, 255, 255, 0.5);
+  color: rgb(179, 178, 178) !important;
+}
