@@ -2,22 +2,28 @@
 
 ## Project
 
-Email validation is a critical part of validating an HTML form. An email is a string or a subset of ASCII characters separated into two parts by @ symbol. The first part contains personal information while the other contains the domain name at which the email is registered.
+React slick is a great carousel component for creating an image slider or carousel-like UI components. But sometimes we need some manual control over the default features that the library provides.
 
 ## Features
 
 - Better UI
-- Email Validation
-- With color code
+- Carousel
+- responsive layout
+- Cutom Arrow
+- Cutom Dots
+- Card Design
+- Bootstrap design use
 
 ## Technology Stack Used In This Project
 
 - JavaScript
 - HTML/CSS
+- ReactJs
+- React-Slick
 
 ## Project Live
 
-### [Click here](https://emailValidation0799.netlify.app/)
+### [Click here]()
 
 ## Run This Project on Your Local Machine
 
