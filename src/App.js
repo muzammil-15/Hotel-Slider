@@ -2,6 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import "./App.css";
 import BasicCard from "./Card";
+import { LuChevronLeft } from "react-icons/lu";
+import { LuChevronRight } from "react-icons/lu";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -48,8 +50,8 @@ export default function App() {
       {
         breakpoint: 1424,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
@@ -58,8 +60,8 @@ export default function App() {
       {
         breakpoint: 1124,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
@@ -80,25 +82,30 @@ export default function App() {
 
   return (
     <div>
-      <h1 style={{ textAlign: "center", margin: "20px 0px" }}>
+      {/* <h1 style={{ textAlign: "center", margin: "20px 0px" }}>
         REACT-SLICK CAROUSEL
-      </h1>
-
-      <div style={{ margin: 20 }}>
-        <button onClick={() => slider?.current?.slickPrev()}>Prev</button>
-        <button
-          style={{ marginLeft: 20 }}
-          onClick={() => slider?.current?.slickNext()}
-        >
-          Next
-        </button>
-      </div>
+      </h1> */}
 
       <Slider ref={slider} {...settings}>
         {products?.map((item, index) => {
           return <BasicCard item={item} />;
         })}
       </Slider>
+
+      <div className="arrows">
+        <div
+          className="btn"
+          
+        >
+          <LuChevronLeft color="yellow" size={40} onClick={() => slider?.current?.slickPrev()}/>
+        </div>
+        <div
+        className="btn"
+          onClick={() => slider?.current?.slickNext()}
+        >
+          <LuChevronRight color="yellow" size={40} />
+        </div>
+      </div>
     </div>
   );
 }
@@ -106,27 +113,17 @@ export default function App() {
 const products = [
   {
     id: 1,
-    image: "https://shravanmeena.netlify.app/static/media/gym.c7d7ed62.png",
+    title: "Find The Best Hotel For Accommodation",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ5SfbBR8vuJIzhTPT-o0rXlmI0BbEFSlbtcoaAq9m1A&s",
   },
   {
     id: 2,
-    image: "https://shravanmeena.netlify.app/static/media/gym.c7d7ed62.png",
+    title: "Find The Best Hotel For Accommodation 2",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKaKPn4YCa6ydUli_yK1Nzw3fWw_Rv2RpjmxA_axE18g&s",
   },
   {
     id: 3,
-    image: "https://shravanmeena.netlify.app/static/media/gym.c7d7ed62.png",
-  },
-  {
-    id: 4,
-    image: "https://shravanmeena.netlify.app/static/media/gym.c7d7ed62.png",
-  },
-
-  {
-    id: 5,
-    image: "https://shravanmeena.netlify.app/static/media/gym.c7d7ed62.png",
-  },
-  {
-    id: 6,
-    image: "https://shravanmeena.netlify.app/static/media/gym.c7d7ed62.png",
-  },
+    title: "Find The Best Hotel For Accommodation 3",
+    image: "https://image-tc.galaxy.tf/wijpeg-9vualzt3dbue0hi00ba4q49ub/chatwalhotelnyc-c-004-build-crop.jpg?width=1920",
+  }
 ];

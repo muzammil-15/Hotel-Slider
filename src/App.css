@@ -3,6 +3,19 @@
   padding-left: 20px;
 }
 
+.arrows{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+}
+.btn{
+  border: none;
+  cursor: pointer;
+
+}
+
+
 .slick-prev {
   z-index: 1;
   /* background-color: red !important; */
@@ -13,15 +26,68 @@
 }
 
 .slick-dots li button:before {
-  color: rgb(179, 178, 178) !important;
+  color: rgb(255, 255, 0) !important;
   font-size: 10px !important;
   margin-top: 10px;
 }
-.slick-dots button {
-  /* background-color: blue !important; */
-}
+/* .slick-dots button {
+  background-color: blue !important;
+} */
 
 .slick-dots li.slick-active button:before {
-  color: white !important;
+  color: yellow !important;
   /* font-size: 12px !important; */
+}
+
+/* Basic Card */
+
+.custom-card {
+  border: none;
+  /* margin: 20px; */
+  padding: 40px 20px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+.title{
+  font-size: 46px !important;
+}
+.text{
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.left-section {
+  background-color: #f8f9fa;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.manager{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 40px;
+}
+.manager img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.manager h4{
+  color: gold;
+}
+.mng-name{
+  color: black;
+  font-style: italic;
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .left-section,
+  .right-section {
+    flex-direction: column;
+    text-align: center;
+  }
 }
